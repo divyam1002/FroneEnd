@@ -6,61 +6,65 @@
 }
 html,
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    color: #fff;
 }
-@mixin flex-center() {
+
+@mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    text-transform: capitalize;
-    border: 4px solid #fff;
+    border: 4px solid white;
     border-radius: 50px;
 }
+
 main {
     height: 100%;
     width: 100%;
-    background-color: #212121;
+    background: #000;
+    color: #fff;
     display: grid;
-    grid-template-rows: 0.1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+
+    grid-template-areas:
+        "nav nav nav"
+        "section1 section1 section2"
+        "section3 section4 section2"
+        "footer footer footer";
+
     gap: 10px;
 }
+
 nav {
-    background-color: rgb(95, 64, 156);
+    background-color: mediumblue;
+    grid-area: nav;
     @include flex-center();
 }
-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+
+.section1 {
+    background-color: mediumaquamarine;
+    grid-area: section1;
+    @include flex-center();
 }
-.left {
-    // background-color: mediumorchid;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    .top {
-        background-color: darkcyan;
-        @include flex-center();
-    }
-    .bottom {
-        // background-color: darkblue;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        .bottom-left {
-            background-color: lightcoral;
-            @include flex-center();
-        }
-        .bottom-right {
-            background-color: rgb(204, 29, 29);
-            @include flex-center();
-        }
-    }
+.section2 {
+    background-color: mediumorchid;
+    grid-area: section2;
+    @include flex-center();
 }
-.right {
-    background-color: mediumvioletred;
+.section3 {
+    background-color: mediumpurple;
+    grid-area: section3;
+    @include flex-center();
+}
+.section4 {
+    background-color: mediumseagreen;
+    grid-area: section4;
+    @include flex-center();
+}
+
+footer {
+    background-color: mediumturquoise;
+    grid-area: footer;
     @include flex-center();
 }

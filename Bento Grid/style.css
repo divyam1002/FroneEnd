@@ -7,85 +7,78 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  color: #fff;
 }
 
 main {
   height: 100%;
   width: 100%;
-  background-color: #212121;
+  background: #000;
+  color: #fff;
   display: grid;
-  grid-template-rows: 0.1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-areas: "nav nav nav" "section1 section1 section2" "section3 section4 section2" "footer footer footer";
   gap: 10px;
 }
 
 nav {
-  background-color: rgb(95, 64, 156);
+  background-color: mediumblue;
+  grid-area: nav;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  text-transform: capitalize;
-  border: 4px solid #fff;
+  border: 4px solid white;
   border-radius: 50px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.left {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-}
-.left .top {
-  background-color: darkcyan;
+.section1 {
+  background-color: mediumaquamarine;
+  grid-area: section1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  text-transform: capitalize;
-  border: 4px solid #fff;
-  border-radius: 50px;
-}
-.left .bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.left .bottom .bottom-left {
-  background-color: lightcoral;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  text-transform: capitalize;
-  border: 4px solid #fff;
-  border-radius: 50px;
-}
-.left .bottom .bottom-right {
-  background-color: rgb(204, 29, 29);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  text-transform: capitalize;
-  border: 4px solid #fff;
+  border: 4px solid white;
   border-radius: 50px;
 }
 
-.right {
-  background-color: mediumvioletred;
+.section2 {
+  background-color: mediumorchid;
+  grid-area: section2;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  text-transform: capitalize;
-  border: 4px solid #fff;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.section3 {
+  background-color: mediumpurple;
+  grid-area: section3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+.section4 {
+  background-color: mediumseagreen;
+  grid-area: section4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
+  border-radius: 50px;
+}
+
+footer {
+  background-color: mediumturquoise;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid white;
   border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
